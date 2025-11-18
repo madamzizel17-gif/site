@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Отключения света — Днепр</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><rect width='40' height='40' rx='8' fill='%232b79d0'/><text x='50%' y='55%' font-size='20' text-anchor='middle' fill='white' font-family='Arial' font-weight='700'>Д</text></svg>" alt="logo">
+        <div>
+          <h1>График отключений света — Днепр</h1>
+          <div class="subtitle">Нажмите на карту, используйте поиск или геолокацию — увидите плановые работы рядом.</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-grid">
+      <section class="map-panel">
+        <div id="map"></div>
+        <div class="map-controls">
+          <input id="addrInput" placeholder="Поиск адреса или улицы..." />
+          <button id="searchBtn">Найти</button>
+          <button id="geoBtn">Моё местоположение</button>
+        </div>
+        <div class="hint">Подсказка: кликните по карте, чтобы установить метку и получить список отключений.</div>
+      </section>
+
+      <aside class="info-panel">
+        <h2>Отключения рядом</h2>
+        <div id="outagesList">Ничего не найдено. Кликните по карте или используйте поиск.</div>
+      </aside>
+    </main>
+
+    <footer>
+      <small>Данные примерные. Для реальной интеграции подключите источник данных (ДТЕК или локальную БД).</small>
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
